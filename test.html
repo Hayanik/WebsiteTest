@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Verstoß: Kein lang-Attribut im <html>-Tag (wcag311) -->
+    <meta charset="UTF-8">
+    <!-- Verstoß: Meta-Refresh für verzögertes Neuladen (wcag221) -->
+    <meta http-equiv="refresh" content="30">
+    <!-- Verstoß: Viewport mit user-scalable=no (wcag144) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- Verstoß: Kein Titel für die Seite (wcag242) -->
+    <title></title>
+</head>
+<body aria-hidden="true"> <!-- Verstoß: aria-hidden auf <body> (wcag412) -->
+
+    <!-- Verstoß: Überschrift nicht in Reihenfolge (wcag131) -->
+    <h2>Überschrift Ebene 2</h2>
+    <h1>Überschrift Ebene 1</h1>
+
+    <!-- Verstoß: Bild ohne alt-Attribut (wcag111) -->
+    <img src="image2.jpeg">
+
+    <!-- Verstoß: Input type="image" ohne alt (wcag111) -->
+    <input type="image" src="submit.jpg">
+
+    <!-- Verstoß: Formularfeld ohne Label (wcag131) -->
+    <input type="text" id="name">
+
+    <!-- Verstoß: Label mit for-Attribut, aber kein passendes id (wcag131) -->
+    <label for="nonexistent">Nicht vorhanden</label>
+
+    <!-- Verstoß: Button ohne accessible name (wcag412) -->
+    <button></button>
+
+    <!-- Verstoß: Frame ohne title (wcag412) -->
+    <frame src="frame.html"></frame>
+
+    <!-- Verstoß: Blink-Element (wcag222) -->
+    <blink>Blinkender Text</blink>
+
+    <!-- Verstoß: Marquee-Element (wcag222) -->
+    <marquee>Bewegender Text</marquee>
+
+    <!-- Verstoß: Unzureichender Farbkontrast (wcag143) -->
+    <p style="color: #999; background-color: #fff;">Low contrast text</p>
+
+    <!-- Verstoß: Link nur durch Farbe unterscheidbar (wcag141) -->
+    <p>Normaler Text <a href="#">Link</a> weiterer Text</p>
+
+    <!-- Verstoß: Inline-Abstände, die nicht anpassbar sind (wcag1412) -->
+    <p style="line-height: 1.5; letter-spacing: 0.12em;">Text mit festen Abständen</p>
+
+    <!-- Verstoß: Kleine Zielgröße für Touch (wcag255) -->
+    <a href="#" style="width: 20px; height: 20px; display: inline-block;">Kleiner Link</a>
+
+    <!-- Verstoß: CSS-Orientierungssperre (wcag134) -->
+    <style>
+        @media (orientation: landscape) {
+            body { display: none; }
+        }
+    </style>
+
+    <!-- Verstoß: Ungültiger lang-Code (wcag311) -->
+    <p lang="invalid">Text mit ungültigem lang-Code</p>
+
+    <!-- Verstoß: Kein lang-Attribut für Teile der Seite (wcag312) -->
+    <p>Text in einer anderen Sprache</p>
+
+    <!-- Verstoß: Keine Beschriftung für Formularelemente (wcag332) -->
+    <form>
+        <input type="text">
+        <input type="submit" value="Senden">
+    </form>
+
+    <!-- Verstoß: Keine Beschriftung für Eingabefelder (wcag332) -->
+    <input type="text" aria-label="">
+
+    <!-- Verstoß: Keine Beschriftung für Schaltflächen (wcag244) -->
+    <button aria-label=""></button>
+
+    <!-- Verstoß: Keine Beschriftung für Links (wcag244) -->
+    <a href="#"></a>
+
+    <!-- Verstoß: Keine Beschriftung für Bilder (wcag111) -->
+    <img src="image2.jpeg" alt="">
+
+    <!-- Verstoß: Keine Beschriftung für Videos (wcag123, wcag124) -->
+    <video src="video.mp4"></video>
+
+    <!-- Verstoß: Keine Beschriftung für Audio (wcag123) -->
+    <audio src="audio.mp3"></audio>
+
+    <!-- Verstoß: Keine Beschriftung für Tabellen (wcag131) -->
+    <table>
+        <tr><td>Zelle 1</td><td>Zelle 2</td></tr>
+    </table>
+
+    <!-- Verstoß: Keine Beschriftung für iframes (wcag412) -->
+    <iframe src="iframe.html"></iframe>
+
+    <!-- Verstoß: Keine Beschriftung für Objekte (wcag111) -->
+    <object data="object.pdf"></object>
+
+    <!-- Verstoß: Keine Beschriftung für Canvas (wcag111) -->
+    <canvas></canvas>
+
+    <!-- Verstoß: Keine Beschriftung für SVGs (wcag111) -->
+    <svg></svg>
+
+    <!-- Verstoß: ARIA-Rolle ohne Beschriftung (wcag412) -->
+    <div role="button"></div>
+
+    <!-- Verstoß: ARIA-Label leer (wcag412) -->
+    <div aria-label=""></div>
+
+    <!-- Verstoß: ARIA-Describedby verweist auf nicht existentes Element (wcag412) -->
+    <div aria-describedby="nonexistent"></div>
+
+</body>
+</html>

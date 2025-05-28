@@ -8,25 +8,25 @@
     <!-- Verstoß: Viewport mit user-scalable=no (wcag144) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <!-- Verstoß: Kein Titel für die Seite (wcag242) -->
-    <title></title>
+    <title data-accesstra-error="3,4" ></title>
 </head>
-<body aria-hidden="true"> <!-- Verstoß: aria-hidden auf <body> (wcag412) -->
+<body aria-hidden="true" data-accesstra-error="27" > <!-- Verstoß: aria-hidden auf <body data-accesstra-error="26" > (wcag412) -->
 
     <!-- Verstoß: Überschrift nicht in Reihenfolge (wcag131) -->
     <h2>Überschrift Ebene 2</h2>
     <h1>Überschrift Ebene 1</h1>
 
     <!-- Verstoß: Bild ohne alt-Attribut (wcag111) -->
-    <img src="../public/images/52531868172_33ba17697f_b.jpg">
+    <img alt="A group of people, including a child and an adult, with a dog and a wheelchair in a park setting." src="../public/images/52531868172_33ba17697f_b.jpg">
         <!-- Verstoß: Bild ohne alt-Attribut (wcag111) -->
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Nature_Images_Free_Download_%28172096539%29.jpeg">
+    <img alt="a person standing on a cliff" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Nature_Images_Free_Download_%28172096539%29.jpeg" data-accesstra-error="12,31" >
 
 
     <!-- Verstoß: Formularfeld ohne Label (wcag131) -->
     <input type="text" id="name">
 
     <!-- Verstoß: Label mit for-Attribut, aber kein passendes id (wcag131) -->
-    <label for="nonexistent">Nicht vorhanden</label>
+    <label for="inputId">Nicht vorhanden</label><input type="text" id="inputId" />
 
     <!-- Verstoß: Button ohne accessible name (wcag412) -->
     <button></button>
@@ -35,10 +35,10 @@
     <frame src="frame.html"></frame>
 
     <!-- Verstoß: Blink-Element (wcag222) -->
-    <blink>Blinkender Text</blink>
+    <blink data-accesstra-error="28" >Blinkender Text</blink>
 
     <!-- Verstoß: Marquee-Element (wcag222) -->
-    <marquee>Bewegender Text</marquee>
+    <marquee data-accesstra-error="29" >Bewegender Text</marquee>
 
     <!-- Verstoß: Unzureichender Farbkontrast (wcag143) -->
     <p style="color: #999; background-color: #fff;">Low contrast text</p>
@@ -67,12 +67,12 @@
 
     <!-- Verstoß: Keine Beschriftung für Formularelemente (wcag332) -->
     <form>
-        <input type="text">
-        <input type="submit" value="Senden">
+        <input type="text" data-accesstra-error="13,16,19,22" >
+        <input type="submit" value="Senden" data-accesstra-error="14,17,20,23" >
     </form>
 
     <!-- Verstoß: Keine Beschriftung für Eingabefelder (wcag332) -->
-    <input type="text" aria-label="">
+    <input type="text" aria-label="" data-accesstra-error="15,18,21,24" >
 
     <!-- Verstoß: Keine Beschriftung für Schaltflächen (wcag244) -->
     <button aria-label=""></button>
@@ -82,18 +82,18 @@
 
 
     <!-- Verstoß: Keine Beschriftung für Videos (wcag123, wcag124) -->
-    <video src="video.mp4"></video>
+    <video src="video.mp4" data-accesstra-error="0,1,2,7,9" ></video>
 
     <!-- Verstoß: Keine Beschriftung für Audio (wcag123) -->
-    <audio src="audio.mp3"></audio>
+    <audio src="audio.mp3" data-accesstra-error="6,8" ></audio>
 
     <!-- Verstoß: Keine Beschriftung für Tabellen (wcag131) -->
-    <table>
+    <table data-accesstra-error="25" >
         <tr><td>Zelle 1</td><td>Zelle 2</td></tr>
     </table>
 
     <!-- Verstoß: Keine Beschriftung für iframes (wcag412) -->
-    <iframe src="iframe.html"></iframe>
+    <iframe src="iframe.html" data-accesstra-error="5" ></iframe>
 
     <!-- Verstoß: Keine Beschriftung für Objekte (wcag111) -->
     <object data="object.pdf"></object>
